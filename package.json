@@ -1,0 +1,39 @@
+{
+  "name": "nlw-copa-back",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "tsx watch src/server.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Faelst/nlw-copa-back.git"
+  },
+  "prisma": {
+    "seed": "tsx prisma/seeds.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Faelst/nlw-copa-back/issues"
+  },
+  "homepage": "https://github.com/Faelst/nlw-copa-back#readme",
+  "dependencies": {
+    "@fastify/cors": "^8.1.1",
+    "@prisma/client": "^4.5.0",
+    "fastify": "^4.9.2",
+    "short-unique-id": "^4.4.4",
+    "uuid": "^9.0.0",
+    "zod": "^3.19.1"
+  },
+  "devDependencies": {
+    "@mermaid-js/mermaid-cli": "^9.1.7",
+    "@types/uuid": "^8.3.4",
+    "prisma": "^4.5.0",
+    "prisma-erd-generator": "^1.2.2",
+    "tsx": "^3.11.0"
+  }
+}
