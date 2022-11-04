@@ -37,6 +37,7 @@ model User {
   name            String
   email           String        @unique
   avatarURL       String?
+  googleId        String?       @unique
   createdAt       DateTime      @default(now())
   participatingAt Participant[]
   ownPool         Pool[]
@@ -59,4 +60,6 @@ model Guess {
   createdAt        DateTime    @default(now())
   game             Game        @relation(fields: [gameId], references: [id])
   participant      Participant @relation(fields: [participantId], references: [id])
+
+  @@unique([participantId, gameId])
 }
