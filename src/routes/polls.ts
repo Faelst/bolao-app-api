@@ -73,11 +73,13 @@ export async function poolRoutes(fastify: FastifyInstance) {
       })
 
       if (!poll) {
-        return rep.status(400).send({ message: 'Poll not found.' })
+        return rep.status(400).send({ message: 'Bolão nao localizado.' })
       }
 
       if (poll.participants.length) {
-        return rep.status(400).send({ message: 'User already register.' })
+        return rep
+          .status(400)
+          .send({ message: 'Jogador ja esta inscrito no bolão.' })
       }
 
       if (!poll.ownerId) {

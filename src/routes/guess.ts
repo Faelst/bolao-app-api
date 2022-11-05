@@ -74,7 +74,7 @@ export async function guessRoutes(fastify: FastifyInstance) {
 
       if (game.date < new Date()) {
         return rep.status(400).send({
-          message: 'Game has been happened.',
+          message: 'Jogo ja realizado.',
         })
       }
 
